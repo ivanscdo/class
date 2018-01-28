@@ -27,7 +27,7 @@ switch back to master
 
 if git status after making changes, files in red, after adding, files in green
 
->git add "file name" (adds to repo, git tracks file)
+>git add "file name" (adds file to repo, git tracks file)
 
 
 
