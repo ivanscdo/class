@@ -1,0 +1,36 @@
+What are the rules of the game?
+
+cat must capture cheesy puffs
+capture is defined is cat touching the cheesy puffs
+cat can move with arrow keys
+cheesy puffs switch location after each successful capture
+capture 10 cheesy puffs to win the game
+
+
+
+How does that translate into code?
+
+generate random location for cat and cheesy puffs upon start of game
+
+if location of cat and cheesy puffs are the same, score goes up by one, generate new random locations for both cath and cheesy puffs
+
+if score equals 10, game ends, present game over screen
+
+
+
+Will we need to use loops? if/else statements?
+
+Yes, loops will be used to control if the game continues or ends. If/else statements will be used to keep track of the score. 
+
+
+
+What variables will we need?
+
+cat, cheesy puffs, score, location of cat, location of cheesy puffs
+
+
+Under what circumstances will our variables change?
+
+The score will change with each successful capture of cheesy puffs by the cat, as well as the location of the cat and cheesy puffs. 
+
+https://scratch.mit.edu/projects/197991280/

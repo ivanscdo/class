@@ -1,0 +1,68 @@
+*Text size in header is off, too small
+*additional section with instructions
+*No image at top right
+*Random Boo Fact buttom does not work
+*List of Boo's Favorite Things not organized as a list
+*Text colors button do not work
+*Grow/Shrink buttons do not work
+*Formatting off- should be info & image; grow/shrink & Text Color; *broken wiki link
+
+
+
+
+IMAGE
+
+missing brackets at the beginning and end.
+
+
+
+
+TEXT SIZE
+
+missing "<h1>" brackets
+
+
+
+
+ADDITIONAL SECTION
+
+
+		<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-primary">
+		<div class="panel-heading">Instructions</div>
+			<div class="panel-body text-center">
+					<h4>Oh no! Someone has vandalized our Boo 'The Cutest Dog In The World' fanpage!</h4>
+				<h4>There are a bunch of errors on this page!</h4>
+				<h4>Try your best to find them all!</h4>
+				</div>
+				</div>
+		</div>
+	</div>
+
+
+
+
+LIST OF FAVORITES
+missing <li> at start and </l1> end of each item
+
+
+RANDOM BOO FACTS
+missing quotation marks around each fact under logic.js
+
+
+TEXT COLOR
+text(color) was off in html file
+pink missing quotation marks in logic.js file
+
+GROW/SHRINK
+missing quotation marks around click in logic.js file
+
+
+BIO MISSING PARAGRAPHS
+missing <p> & </p>tags
+
+BROKEN WIKIPEDIA LINK
+missing url in <a href="missing url here">
+
+
