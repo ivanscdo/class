@@ -19,10 +19,13 @@
   }
   
   section {
+    background: red;
+    padding: 20px;
+    margin-bottom: 100px;
   }
   
   #left {
-      background: plum;
+      /*background: plum;*/
       float: left;
       width: 33.3%;
       padding: 20px;
@@ -44,17 +47,19 @@
   }
   
   #full {
-
+    background: yellow;
   }
   
   #division {
+    /*background: purple;*/
 
   }
   
   aside {
     padding: 80px;
     margin-bottom: 20px;
-    background: plum;
+    background: orange;
+    float: left;
   }
   
   footer {

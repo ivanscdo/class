@@ -51,7 +51,7 @@ section {
 
 #full {
   width: 100%;
-  overflow: visible;
+  overflow: auto;
   clear: both;
   background: #eee;
 }
