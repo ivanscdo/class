@@ -1,11 +1,8 @@
-GITHUB 1.2
-
-41:53
+GITHUB 1.2;41:53
 
 
 
 creating repo, cloning
-
 
 
 homepage
@@ -31,10 +28,6 @@ done!
 
 
 
-
-
-
-
 >git branch
 shows what branch currently on
 
@@ -43,17 +36,11 @@ shows what branch currently on
 updates on current repo, untracked files
 
 
-
-
 47:09
-
 
 >git checkout -b "name of branch"
 
 making a branch to work on, copy seperate from master
-
-
-
 
 
 >git checkout master
@@ -61,16 +48,15 @@ making a branch to work on, copy seperate from master
 
 switch back to master
 
-
 >git add "file name"
 adds file to repo, git tracks file
 ex:adding info to file
 
+>git add .
+adds all changes
 
 git status after making changes, files in red
 after git add, files in green
-
-
 
 
 >git commit -m "update message"
@@ -78,21 +64,15 @@ after git add, files in green
 
 ex:saving file
 
-
 >git push origin "name of branch"
 
 ex:uploading file to cloud
 
 
-
-
-
-
 on github
 
-
-
 compare and pull request - merge branch with master
+
 
 
 
