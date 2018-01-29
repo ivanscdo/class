@@ -1,43 +1,101 @@
-GITHUB 1.2;41:53
+GITHUB 1.2
+
+41:53
+
+
 
 creating repo, cloning
 
+
+
 homepage
+
 new repository
+
 Clone or download button
+
 Clone with SSH
+
 copy
+
 open git bash
+
 cd to correct directory
-git clone git@github.com:ivanscdo/"name of repo"
+
+>git clone git@github.com:ivanscdo/"name of repo"
+
 enter password
+
 done!
 
 
 
->git branch - shows what branch currently on
->git status - updates on current repo, untracked files
+
+
+
+
+
+>git branch
+shows what branch currently on
+
+
+>git status
+updates on current repo, untracked files
+
+
+
 
 47:09
-making a branch to work on copy seperate from master
+
+
 >git checkout -b "name of branch"
 
-switch back to master
+making a branch to work on, copy seperate from master
+
+
+
+
+
 >git checkout master
 
-if git status after making changes, files in red, after adding, files in green
 
->git add "file name" (adds file to repo, git tracks file)
-
+switch back to master
 
 
->git commit -m "message"
+>git add "file name"
+adds file to repo, git tracks file
+ex:adding info to file
 
-git push origin "name of branch"
+
+git status after making changes, files in red
+after git add, files in green
+
+
+
+
+>git commit -m "update message"
+
+
+ex:saving file
+
+
+>git push origin "name of branch"
+
+ex:uploading file to cloud
+
+
+
 
 
 
 on github
 
+
+
 compare and pull request - merge branch with master
 
+
+
+can also merge directly from bash with
+>git merge "name of branch"
+merges current branch to "name of branch"
