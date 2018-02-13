@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Browser Events practice</title>
+  </head>
+  <body>
+
+    <div class="my-content">
+        0
+    </div>
+
+    <div class="my-squares">
+        0
+    </div>
+
+    <button id="clickable">Click Me please</button>
+
+    <script>
+
+        var n = 0;
+
+        document.onkeyup = function ( event ) {
+            n = n + 1;
+            console.log(event.key, "-", n);
+
+            // console.log(event.keyCode === 65);
+            // // var numberContainer = document.querySelector(".my-content");
+            // // // console.log(numberContainer);
+            // // numberContainer.innerHTML = n;
+
+            // var squaresContainer = document.querySelector(".my-squares");
+
+            // squaresContainer.innerHTML = n**n;
+
+            // if (n%2 === 0) {
+            //     alert("n is even!")
+            // }
+            
+        }
+
+        // // if specifying another document.onkeyup, because setting value, 2nd will not work; use .addEventListener instead
+        // document.onkeyup = function ( event ) {
+        //     // n = n + 1;
+        //     // // console.log(event.key, "-", n);
+        //     // var numberContainer = document.querySelector(".my-content");
+        //     // // console.log(numberContainer);
+        //     // numberContainer.innerHTML = n;
+
+        //     // var squaresContainer = document.querySelector(".my-squares");
+
+        //     // squaresContainer.innerHTML = n**n;
+            
+        // }
+
+
+
+        // document.addEventListener("keyup", function(event){
+        //     n = n + 1;
+
+        //     var numberContainer = document.querySelector(".my-content");
+
+        //     numberContainer.innerHTML = n;
+
+        //     var squaresContainer = document.querySelector(".my-squares");
+
+        //     squaresContainer.innerHTML = n**n;
+
+        // });
+
+
+
+        // document.querySelector("#clickable").addEventListener("click", function( event ){
+        //     n = n + 1;
+
+        //     var numberContainer = document.querySelector(".my-content");
+
+        //     numberContainer.innerHTML = n;
+
+        //     var squaresContainer = document.querySelector(".my-squares");
+
+        //     squaresContainer.innerHTML = n**n;
+
+        // });
+
+
+
+
+    </script>
+    
+  </body>
+</html>
