@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RPS!!!
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+
+var wins = 0;
+    var losses = 0;
+    var ties = 0;
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+// rock
+      if (userGuess == "r" && computerGuess == "r" ) {
+        alert("tie!")
+      } else if (userGuess == "r" && computerGuess == "p") {
+        alert(" comp wins!")
+      } else if (userGuess == "r" && computerGuess == "s") {
+        alert(" user wins!")
+      }
+// paper
+      if (userGuess == "p" && computerGuess == "p" ) {
+        alert("tie!")
+      } else if (userGuess == "p" && computerGuess == "s") {
+        alert(" comp wins!")
+      } else if (userGuess == "p" && computerGuess == "r") {
+        alert(" user wins!")
+      }
+// scissors
+      if (userGuess == "s" && computerGuess == "s" ) {
+        alert("tie!")
+      } else if (userGuess == "s" && computerGuess == "r") {
+        alert(" comp wins!")
+      } else if (userGuess == "s" && computerGuess == "p") {
+        alert(" user wins!")
+      }
+
+    };
+  </script>
+
+</body>
+
+</html>

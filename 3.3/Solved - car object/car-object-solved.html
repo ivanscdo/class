@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <h1>Press the following keys:</h1>
+    <p>h to honk</p>
+
+    <p>t for tune up</p>
+    <p>a to drive around the world</p>
+    <p>w to drive to work</p>
+
+    <script>
+
+      // Creating our car object.
+      var car = {
+
+        // Properties of our car object.
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        // Creating the driveToWork method.
+        // A method is a function associated with an object.
+        driveToWork: function() {
+
+          // When we say "this" (as in this.mileage) we are referring to the object the method is a part of.
+          // In this case, we will alert the mileage of the car object.
+          alert("Old Mileage: " + this.mileage);
+
+          // Adding 8 to the car's mileage.
+          this.mileage = this.mileage + 8;
+
+          // Alerting the car's new mileage.
+          alert("New mileage: " + this.mileage);
+        },
+
+        // The driveAroundWorld method adds 24,000 miles to our car, sets isWorking to false, and makes some alerts.
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        // The getTuneUp method sets isWorking to true and alerts a message.
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        // The honk method alerts a honking message.
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+
+
+      // How would we log...
+
+      // The car's make?
+      // console.log(car.make);
+
+      // // The car's model?
+      // console.log(car.model);
+
+      // // The car's mileage?
+      // console.log(car.mileage);
+
+      // // How would we run the car's driveToWork method?
+      // car.driveToWork();
+
+      // // How would we run the car's driveAroundWorld method?
+      // car.driveAroundWorld();
+
+      // // How would we run the getTuneUp method?
+      // car.getTuneUp();
+
+      // // honk
+      // car.honk();
+
+
+
+// starter code from rps
+      document.onkeyup = function(event) {
+
+// Determines which key was pressed.
+var carKey = event.key;
+console.log(carKey)
+
+// dont need
+// // Randomly chooses a choice from the options array. This is the Computer's guess.
+// var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+// Alerts the key the user pressed (userGuess).
+// alert("User pressed: " + carKey);
+
+
+// dont need
+// Alerts the Computer's guess.
+// alert("Computer guess: " + computerGuess);
+// rock
+if (carKey !== "h" && carKey !== "t" && carKey !== "a" && carKey !== "w") {
+  alert("Try again! Press H, T, A, or W");
+} else if (carKey === "h" ) {
+  car.honk();
+} else if (carKey === "t") {
+  car.getTuneUp();
+} else if (carKey === "a") {
+  car.driveAroundWorld();
+} else if (carKey === "w") {
+  car.driveToWork();
+}
+
+// dont need
+// paper
+// if (userGuess == "p" && computerGuess == "p" ) {
+//   alert("tie!")
+// } else if (userGuess == "p" && computerGuess == "s") {
+//   alert(" comp wins!")
+// } else if (userGuess == "p" && computerGuess == "r") {
+//   alert(" user wins!")
+// }
+// // scissors
+// if (userGuess == "s" && computerGuess == "s" ) {
+//   alert("tie!")
+// } else if (userGuess == "s" && computerGuess == "r") {
+//   alert(" comp wins!")
+// } else if (userGuess == "s" && computerGuess == "p") {
+//   alert(" user wins!")
+// }
+
+};
+
+    </script>
+    
+  </body>
+</html>

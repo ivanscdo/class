@@ -1,0 +1,3 @@
+[submodule "clickyblock"]
+	path = clickyblock
+	url = https://github.com/ivanscdo/clickyblock.git

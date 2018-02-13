@@ -1,0 +1,64 @@
+/* google fonts */
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Monoton', cursive;
+    font-size: 30px
+    font-weight: 200;
+}
+
+h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.p1 {
+    line-height: 1.5;
+    letter-spacing: 1.5;
+}
+
+.p2 {
+    line-height: 2.5;
+    letter-spacing: 2.5;
+}
+
+.p3{
+    line-height: 3.5;
+    letter-spacing: 3.5;
+}
+
+/*  pseudo class/code */
+
+.link1,
+.link2,
+.link3 {
+    color: teal;
+}
+
+
+.link1:hover,
+.link2:hover,
+.link3:hover {
+    color: pink;
+}
+
+.link1:active,
+.link2:active,
+.link3:active {
+    color: red;
+    font-size: 100px;
+}
+
+
+.link1:focus,
+.link2:focus,
+.link3:focus {
+    color: blue;
+}
+
+

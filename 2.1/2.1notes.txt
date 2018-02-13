@@ -1,0 +1,10 @@
+-ivanscdo.github.io
+live website steps:
+create repo, name it "username".github.io, clone, edit, push, url:"username".github.io
+
+-clickybox
+javascript toy
+used to create GitHub pages
+steps: create repo, name it whatever, clone, edit, push, settings, GitHub pages, none>master, msg:site now available at url ("username".github.io/"name of repo")
+
+aside: mb t130.22:42 turned into submodule of repo class

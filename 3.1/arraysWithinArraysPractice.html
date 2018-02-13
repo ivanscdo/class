@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Arrays within Arrays Demo</title>
+  </head>
+  <body>
+
+    <h1>Arrays within Arrays Demo!</h1>
+
+    <script type="text/javascript">
+
+    var stripes = ["black ", "white "]
+    var giraffe = [stripes, "tall ", "herbivore ",];
+    var zooAnimals = ["Zebra ", "Rhino ", giraffe, "Owl "];
+
+    console.log("" + zooAnimals);
+    console.log(zooAnimals[2]);
+    console.log(zooAnimals[2][0]);
+    console.log(zooAnimals[2][0][0]);
+
+
+    // method:Array.isArray()Returns true if a variable is an array, if not false.
+    if (Array.isArray(zooAnimals[2][0])) {
+        console.log("zooAnimals[2][0] is an array!")
+    } else {
+        console.log("zooAnimals[2] is not an array!")
+    }
+    </script>
+
+  </body>
+</html>
