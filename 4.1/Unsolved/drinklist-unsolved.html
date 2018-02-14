@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+<!-- jquery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // ...
+
+    // document.getElementById("drink-options")
+    // var drinks = document.querySelector("#drink-options");
+// solution
+    // var myDiv = document.querySelector("#drinks-options");
+
+    
+
+
+
+    // ...
+
+
+    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
+    // ...
+
+    // for (i = 0; i <= drinkList.length; i++) {
+    //   var newDrinksElem = document.createElement("div");
+    //   newDrinksElem.innerHTML = drinkList[i];
+    //   drinks.appendChild( newDrinksElem )
+    //   // drinks.innerHTML = drinkList;
+    // }
+
+
+// solution
+    // for (i=0; i< drinkList.length; i++) {
+    //   var myNewElement = document.createElement("div");
+    //   myNewElement.innerHTML = drinkList[i];
+    //   myDiv.appendChild(myNewElement);
+    // }
+
+
+
+// jquery
+var myDrinkList = $("#drink-options");
+myDrinkList
+// .html("<h1>Here's my html</h1>")
+// .text("It works!")
+// .append("<div class='my-special-class'>Look here's some html</div>")
+.append("<div class='my-special-class'> looks here's some html</div>")
+
+
+
+
+
+
+    // ...
+
+  </script>
+
+</body>
+</html>
