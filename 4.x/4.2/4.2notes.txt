@@ -1,0 +1,8 @@
+
+
+     $(".down-button").on("click", function() {
+        $(".captain-planet").animate({ top: "+=200px" }, "normal" or 1000, linear/swing); //normal fast or slow is speed, can also use milliseconds
+      });
+
+eassing fucntion (linear/swing), curve of time, how it moves through its state, graph how it changes it property, linear 
+switch - multipe  conditions for a check
