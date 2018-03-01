@@ -1,0 +1,88 @@
+terminal
+    curl google.com
+get html document, terminal does not know how to parse html doc, but browser does
+
+JSON
+works like javascript, open array, then object, just data, cannot put functions, not dynamic, just finished javascript object, wrap up, send, something else opens reads
+
+in keys: values, keys need to be quoted
+
+super prevalent, always have JSON option get get data from api, some xml but can convert to JSON, 
+
+What is an API?
+
+     set of routines, protocols, and tools for building software applications. 
+     a set of rules for building apps
+
+What does API stand for?
+
+    application programing interface
+
+What are some examples of APIs? (Find links to specific APIs)
+
+    google maps
+    youtube
+    amazon
+    eBay
+
+What do these specific APIs allow you as a developer to do?
+
+    amazon, eBay - use existing infrastructure to create specialized web stores
+
+API - something you use your code to access a part of the functionality and does something for you
+NYT ex send request to NYT and get list of articles, send request, get back data
+write code on your end that does something somewhere else
+
+
+api's communicate through JSON
+
+
+mashape.com
+
+
+omdbapi.com
+
+you get back, what they want you to get back
+
+not turnkey, ned to read documentation to get idea of how to use
+
+t parameter allows for 
+
+http:// - protocol, hyper text transfer protocol
+www.omdbapi.com/ - site, host name, site we want to make request to
+?t=Forrest+Grump&y=&plot=short&apikey=trilogy - query string
+
+? - begin search
+    t=Forrest+Grump - search this title
+& - another parameter
+    y= - not required, but can be empty, just ex no reason to include
+&
+    plot=short
+&
+    apikey=trilogy - name they chose to parameter
+
+does not need specific order
+
+
+"hi i'm api key x, give me this movie with short plot"
+send response as JSON 
+
+xml - like html, but data transfer instead of document type, like html with tags, 
+
+synchronous code execution  - one thing at a time, this line, this line, then this line
+asynchronous  - starts doing thing, then later comes back to it when it needs to
+AJAX is asynchronous
+
+$.get(url).then(function)
+
+.get returns promise - type that reflects that it will be fulfilled or rejected
+
+get this, then do this
+
+.get & .post
+
+https://www.omdbapi.com/?s=yellow+submarine&apikey=trilogy
+
+NEED TO MAKE KEY FOR GIPHY!!
+
+.data gets all the information related to the movie, use dot notation to access individual values
