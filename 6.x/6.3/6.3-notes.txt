@@ -1,0 +1,3 @@
+hw
+start off as buttons, add new buttons, press and show new gifs, click starts and click stop, search field to add list of animals, list of animals from array, 
+

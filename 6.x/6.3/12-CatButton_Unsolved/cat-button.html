@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Magical Cat Button</title>
+</head>
+
+<body>
+  <button id="cat-button">magical cat button</button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // selects id cat-bitton, when clicked run the function...
+    $("#cat-button").on("click", function() {
+
+      // variable queryURL holds the api url we will be searching
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats";
+
+      // call ajax with parameters url and method, url from above and method is get
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      // once the information is received, we carry out this function
+        .then(function(response) {
+
+        // navigate through the response object, through data onto image_original_url, place that url into a variable 
+          var imageUrl = response.data.image_original_url;
+
+          // create an img element and put into variable catImage
+          var catImage = $("<img>");
+
+          // in the img element we just created, add the scr attribute using the imageUrl created above
+          catImage.attr("src", imageUrl);
+          catImage.attr("alt", "cat image");
+
+          // attach the img element onto the div#images element
+          $("#images").prepend(catImage);
+        });
+    });
+  </script>
+</body>
+
+</html>
