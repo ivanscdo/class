@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="style.css">  -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:500,600" rel="stylesheet">
+    <title>New York Times Search</title>
+  </head>
+  <body>
+    <div class="container">
+            <div class="row">
+              <div class="jumbotron">
+                <h1 class="display-4"><i class="far fa-newspaper"> New York Times Search</i></h1>
+          </p>
+    </div>
+  
+    </div>
+    <div class="row">
+    
+            <form class="search-p">
+                    <h4>Search Parameters</h4>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Search Term</label>
+              <input type="form-text" class="form-control" id="search-term"  placeholder="lebron james">
+            
+            </div>
+              <div class="form-group">
+              <label for="exampleFormControlSelect1">Number of Records to Review</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label >Start Year (Optional)</label>
+              <input type="form-text" class="form-control" id="begin-date" placeholder="1987">
+            </div>
+            <div class="form-group">
+              <label >End Year (Optional)</label>
+              <input type="form-text" class="form-control" id="end-date" placeholder="2018">
+            </div>
+          
+            <button type="button" class="btn btn-secondary" id="search-button">Search</button>
+            <button type="button" class="btn btn-secondary">Clear Results</button>
+          </form>
+    </div>
+    <div class="row">
+  
+    <div class="container">
+      <div class="row" id="top-article">
+
+
+      </div>  
+    </div>
+  </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="nyt-app.js"></script>
+  </body>
+</html>
