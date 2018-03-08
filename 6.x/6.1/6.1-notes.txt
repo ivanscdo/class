@@ -48,6 +48,7 @@ not turnkey, ned to read documentation to get idea of how to use
 
 t parameter allows for 
 
+😯
 http:// - protocol, hyper text transfer protocol
 www.omdbapi.com/ - site, host name, site we want to make request to
 ?t=Forrest+Grump&y=&plot=short&apikey=trilogy - query string

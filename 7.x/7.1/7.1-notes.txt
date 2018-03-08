@@ -1,0 +1,61 @@
+storing data to retrieve for later use
+
+ex todo list, add items,removed when refreshed, not stored, just changed on page
+
+two types: client side, server side
+
+client side
+    stored in browser
+    problem: all visible!
+    can only store data for one user,
+
+    only store stuff that pertains to current user
+
+    if online can still access data, 
+
+    not many instances where apps used offline
+
+    important piece of info can be stored client side
+    
+    good for: duplicate data (nothing on client that not stored in server), anything needed offline; ex: on forum, collapse threads, not critical, not negatively impact experience
+
+    incremental ui improvements 
+
+server side
+    info is out of reach, stored in one place, everybody's data stored in one place
+    all application data
+
+
+local storage, session storage
+local will persist over browser restart
+session just for one use
+
+other two types
+web sql & indexed DB, more full featured web storage (only supported in chrome!)
+
+
+when write data to DOM does not persist
+how to write to local storage
+
+how to save data past page refresh
+
+can only take primitive values, number/string, not objects etc
+workaround!
+input with json.stringify()
+take out with json.parse()
+
+make sure it exists before you start using it with if (object) {};
+
+cookies
+how to store
+when you get cookies, you get every bit of data stored with that cookies
+
+set up with options at beginning
+
+document.cookie
+
+
+read cookie function (google!)
+
+use js cookie instead! which is a library
+
