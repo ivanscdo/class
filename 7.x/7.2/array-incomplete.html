@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1></h1>
+    <form>
+        <input type="text" name="title" class="title-input"/>
+        <input type="submit" value="submit" />
+    </form>
+
+    <script>
+    var config = {
+        apiKey: "AIzaSyCTMwWdU5CqMwMaxsQlVAVwsM54mzVFvjw",
+        authDomain: "introfirebase7-2.firebaseapp.com",
+        databaseURL: "https://introfirebase7-2.firebaseio.com",
+        projectId: "introfirebase7-2",
+        storageBucket: "",
+        messagingSenderId: "63364815717"
+    };
+    firebase.initializeApp(config);
+
+        $(function(){
+            let database = firebase.database();
+
+            database.ref("array/").on("value", function (snapshot) {
+                let data = snapshot.val();
+
+                if( ! data ){
+                    data = [];
+                }
+
+                $("form").off("submit").on("submit", function (e) {
+                    e.preventDefault();
+                    // Get the input and format it to be ready to send to firebase
+                    let val = $(".title-input").val();
+
+                    $(".title-input").val("");
+
+                    data.push(val)
+
+                    // Add a firebase call here to add the data to firebase
+
+                    firebase.database().ref("array/").set(data);
+
+                    
+                })                
+
+                $("h1").text(data.join(" "));
+            })
+        })       
+    </script>
+</body>
+</html>

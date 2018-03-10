@@ -1,0 +1,127 @@
+Last login: Fri Mar  2 12:44:33 on ttys002
+MacBook:~ ivansaucedo$ cd ~/desktop/code/class-notes/6.x/6.3
+MacBook:6.3 ivansaucedo$ ls
+12-CatButton_Unsolved
+14-DynamicElements_Unsolved
+15-PausingGifs_Unsolved
+6.3-notes.txt
+Screen Shot 2018-03-03 at 12.48.18 PM.png
+button-triggered-ajax.html
+nyt-search-app
+MacBook:6.3 ivansaucedo$ cd nyt-search-app
+MacBook:nyt-search-app ivansaucedo$ ls
+NYTSearch.html	index.html	nyt-app.js
+MacBook:nyt-search-app ivansaucedo$ git clone git@github.com:monircederstrom/NYT-Search.git
+Cloning into 'NYT-Search'...
+Enter passphrase for key '/Users/ivansaucedo/.ssh/id_rsa': 
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 8 (delta 0), reused 4 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+MacBook:nyt-search-app ivansaucedo$ ssh-add -K
+Enter passphrase for /Users/ivansaucedo/.ssh/id_rsa: 
+Identity added: /Users/ivansaucedo/.ssh/id_rsa (/Users/ivansaucedo/.ssh/id_rsa)
+MacBook:nyt-search-app ivansaucedo$ ls
+NYT-Search	NYTSearch.html	index.html	nyt-app.js
+MacBook:nyt-search-app ivansaucedo$ pwd
+/Users/ivansaucedo/desktop/code/class-notes/6.x/6.3/nyt-search-app
+MacBook:nyt-search-app ivansaucedo$ ls
+NYT-Search	NYTSearch.html	index.html	nyt-app.js
+MacBook:nyt-search-app ivansaucedo$ cd NYT-Search
+MacBook:NYT-Search ivansaucedo$ ls
+NYTSearch.html	README.md	style.css
+MacBook:NYT-Search ivansaucedo$ cd ..
+MacBook:nyt-search-app ivansaucedo$ ls
+NYT-Search	NYTSearch.html	index.html	nyt-app.js
+MacBook:nyt-search-app ivansaucedo$ mv nyt-app.js NYT-Search
+MacBook:nyt-search-app ivansaucedo$ ls
+NYT-Search	NYTSearch.html	index.html
+MacBook:nyt-search-app ivansaucedo$ NYT-Search
+-bash: NYT-Search: command not found
+MacBook:nyt-search-app ivansaucedo$ cd NYT-Search
+MacBook:NYT-Search ivansaucedo$ ls
+NYTSearch.html	README.md	nyt-app.js	style.css
+MacBook:NYT-Search ivansaucedo$ git branch
+* master
+MacBook:NYT-Search ivansaucedo$ git fetch
+MacBook:NYT-Search ivansaucedo$ git branch
+* master
+MacBook:NYT-Search ivansaucedo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	nyt-app.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook:NYT-Search ivansaucedo$ git checkout -b ivan
+Switched to a new branch 'ivan'
+MacBook:NYT-Search ivansaucedo$ git branch
+* ivan
+  master
+MacBook:NYT-Search ivansaucedo$ git status
+On branch ivan
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	nyt-app.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook:NYT-Search ivansaucedo$ git add .
+MacBook:NYT-Search ivansaucedo$ git status
+On branch ivan
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   nyt-app.js
+
+MacBook:NYT-Search ivansaucedo$ git commit -m "add js"
+[ivan 10bd86c] add js
+ 1 file changed, 65 insertions(+)
+ create mode 100644 nyt-app.js
+MacBook:NYT-Search ivansaucedo$ git push -u origin ivan
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 863 bytes | 863.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:monircederstrom/NYT-Search.git
+ * [new branch]      ivan -> ivan
+Branch ivan set up to track remote branch ivan from origin.
+MacBook:NYT-Search ivansaucedo$ git checkout develop
+Branch develop set up to track remote branch develop from origin.
+Switched to a new branch 'develop'
+MacBook:NYT-Search ivansaucedo$ git branch
+* develop
+  ivan
+  master
+MacBook:NYT-Search ivansaucedo$ git pull
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:monircederstrom/NYT-Search
+   a791e7d..2f773e7  master     -> origin/master
+Already up-to-date.
+MacBook:NYT-Search ivansaucedo$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+MacBook:NYT-Search ivansaucedo$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 3), reused 2 (delta 1), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:monircederstrom/NYT-Search
+   2f773e7..5671b34  master     -> origin/master
+ * [new branch]      monir      -> origin/monir
+Updating a791e7d..5671b34
+Fast-forward
+ NYTSearch.html |  2 +-
+ nyt-app.js     | 65 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 66 insertions(+), 1 deletion(-)
+ create mode 100644 nyt-app.jsfdsa
+MacBook:NYT-Search ivansaucedo$ code .
+MacBook:NYT-Search ivansaucedo$ 

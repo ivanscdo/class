@@ -1,0 +1,24 @@
+employee data mgmt firebase project
+    can dynamically create data
+    store as few data > the less updates to update data, the better
+    anything that can be stored by calculated
+
+.set() completely replacing all info on database
+
+.push - adds info as an array kind of construct, does not replace
+    database.ref().push()
+    dataAdded: firebase.database.ServerValue.TIMESTAMP
+        constant - tells firebase use the most recent timestamp when adding this data
+
+.orderByChild() - 
+.limitToLast
+.on()
+
+child_added only work with last child added
+
+momentjs.com
+wrapper on date time object to format
+
+pass it a date, that becomesmoment that yuo can use methords on 
+
+format(x) x= unix time stamp, ms since 1/1/70

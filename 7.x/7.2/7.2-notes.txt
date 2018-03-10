@@ -1,0 +1,105 @@
+firebase
+    real time data base, as soon as somebody amesk an update to some peice of data, get alert so yu can update your page
+
+1st - get setup!
+    npm install - g firebase-tools
+    npm node package manager, get into node using everyday, detch a package for js, to include wihtin out ap
+    -g installs something globally, rather than current project, tool isntalled on coputer, grabs firebase pack, adds on application, run on anywhere, actual .exe
+    firebase-tools
+
+    next:
+    console.firebase.google.com
+        add project
+            give it a name, creates project id, set country/region to us, google matches to closes data center
+        continue, in firebase starter docs
+
+        add firebase to web app, copy code where can access quickly, setup code
+        database
+            get started, real time database
+            gives some stuff: representation of data
+            rules: open to everyone, don't worry abot setting up auth first
+            read and write prop to true
+            production app, read7write true wold not be acceptable
+
+
+firebase script!!!
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCTMwWdU5CqMwMaxsQlVAVwsM54mzVFvjw",
+        authDomain: "introfirebase7-2.firebaseapp.com",
+        databaseURL: "https://introfirebase7-2.firebaseio.com",
+        projectId: "introfirebase7-2",
+        storageBucket: "",
+        messagingSenderId: "63364815717"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+creating a firebase project
+    find somewhere to work within, directory
+    create dir
+    first: firebase login (use same email as project!)
+    associated terminal user to gmail account, auth taken care of
+
+    next: in dir, run firebase init
+        open interactive term
+        database & hosting
+        ask which project, select proj name
+        what file used for database rules? enter
+        public dir? enter
+        config as single page app? n, enter
+
+files from firebase dir
+    hosting public, points to public, start service, to use files from public to run the server
+    firebase has built in server
+    public saying use public
+
+run server 
+    go to firebase servier
+    run: firebase serve, gives name of url
+    go to: localhost:5000, 
+    cannot have more than one at the same time
+    spin up small server
+    delete: 404.html
+    empty: index.html
+    by default read from index.html, if other pages /whatever.html to access those pages
+    given files: dump to public dir
+
+
+<1:07:00>
+firebase.js hangles initial auth, then specific scripts, in this case firebase-database, next include jQuery, next
+
+
+1:39:20
+
+all functions written the same way for initialization or updating, work anytime page reloads, forces to rite something dame effect when data changes
+
+
+add different data type
+    last one, every time add item, overwrote item
+    don't wnat to do that every simgle time
+
+    .off("submit")
+
+
+    data in multples, use / "hey this is a folder that collects multiple objects"
+    can pass into firebase anything that is json
+
+
+CRUD
+    create  - create data, .set
+    read  - read data from database .on listen for data
+    update - update wthout changing entire record .update()
+    delete - .remove()
+
+index.html
+bunh of divs
+unique key for that user
+
+32 items deep
+
+section data in different refs at top lovel
+    user data, blog post data
+    seperate refs out into logical groups
