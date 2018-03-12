@@ -13,13 +13,23 @@
 
   <form>
     <input type="text">
-    <input type="submit" value="save">
+    <input type="submit" value="save">  
+    <input type="submit" value="localStorage.clear()">
   </form>
 
   <div id="todo-list"></div>
 
   <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
   <script type="text/javascript">
+
+    $("input[value='localStorage.clear()']").on("click", function(){
+
+      localStorage.clear();
+
+    });
+
+
+
     var list = JSON.parse(localStorage.getItem("todolist"));
 
     // Checks to see if the todolist exists in localStorage and is an array currently
@@ -67,7 +77,10 @@
       putOnPage();
     });
 
-    $("input[type='submit']").on("click", function(event) {
+    // $("input[type='submit']").on("click", function(event) {
+    // can use this syntax to select element: $("input [attribute= 'attribute name' ] ")
+    $("input[value='save']").on("click", function(event) {
+      
       event.preventDefault();
       // Setting the input value to a variable and then clearing the input
       var val = $("input[type='text']").val();

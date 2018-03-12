@@ -1,10 +1,16 @@
 <!DOCTYPE = html>
 <html>
   <head>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>7.2 intro to firebase</title>
+
   </head>
   <body>
 
@@ -22,69 +28,36 @@
                   <input type="text" class="form-control" id="name-input" placeholder="Name">
                   <small id="emailHelp" class="form-text text-muted">Enter Your Name</small>
                 </div>
+
                 <button type="submit" class="btn btn-primary" id="name-submit">Submit</button>
-              </form>
+            </form>
           
         </div>
       </div>
     </main>
 
+  <!-- jQuery cdn -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
+  <!-- firebase script -->
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCTMwWdU5CqMwMaxsQlVAVwsM54mzVFvjw",
+      authDomain: "introfirebase7-2.firebaseapp.com",
+      databaseURL: "https://introfirebase7-2.firebaseio.com",
+      projectId: "introfirebase7-2",
+      storageBucket: "",
+      messagingSenderId: "63364815717"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-
-      <!-- jQuery cdn -->
-      <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-
-      <!-- firebase script -->
-      <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyCTMwWdU5CqMwMaxsQlVAVwsM54mzVFvjw",
-          authDomain: "introfirebase7-2.firebaseapp.com",
-          databaseURL: "https://introfirebase7-2.firebaseio.com",
-          projectId: "introfirebase7-2",
-          storageBucket: "",
-          messagingSenderId: "63364815717"
-        };
-        firebase.initializeApp(config);
-
-
-        $("#name-submit").on("click", function(){
-            event.preventDefault();
-
-            let database = firebase.database();
-
-            // var userName = $("#name-input").val().trim()
-            // console.log(userName);
-
-            let val = $("#name-input").val().trim()
-
-            database.ref("message").set(val);
-            // ref is either a single value, or holder, holds place, when reference later, use ref to get it, kinda like id, key and object, think of ref as key that will get values out of later
-            // setting that key equivalent to 
-
-            // firebase giant JSON, that can be used as database
-
-            database.ref("message").on("value", function(snapshot) {
-
-                let data = snapshot.val()
-
-                $("h1").text(data)
-            })
-
-        // END OF: $("#name-submit").on("click", function(){
-        });
-
-
-
-
-      </script>
-
-      <!-- <script src="app.js"></script> -->
+  <script src="introFirebase7-2.js"></script>
         
   </body>
 </html>

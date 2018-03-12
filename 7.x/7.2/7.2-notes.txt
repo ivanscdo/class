@@ -1,5 +1,5 @@
 firebase
-    real time data base, as soon as somebody amesk an update to some peice of data, get alert so yu can update your page
+    real time data base, as soon as somebody makes an update to some piece of data, get alert so you can update your page
 
 1st - get setup!
     npm install - g firebase-tools
@@ -57,7 +57,7 @@ files from firebase dir
     public saying use public
 
 run server 
-    go to firebase servier
+    go to firebase server
     run: firebase serve, gives name of url
     go to: localhost:5000, 
     cannot have more than one at the same time
@@ -69,12 +69,12 @@ run server
 
 
 <1:07:00>
-firebase.js hangles initial auth, then specific scripts, in this case firebase-database, next include jQuery, next
+firebase.js handles initial auth, then specific scripts, in this case firebase-database, next include jQuery, next
 
 
 1:39:20
 
-all functions written the same way for initialization or updating, work anytime page reloads, forces to rite something dame effect when data changes
+all functions written the same way for initialization or updating, work anytime page reloads, forces to write something same effect when data changes
 
 
 add different data type
@@ -84,22 +84,31 @@ add different data type
     .off("submit")
 
 
-    data in multples, use / "hey this is a folder that collects multiple objects"
+    data in multiples, use / at end, saying "hey this is a folder that collects multiple objects"
     can pass into firebase anything that is json
 
 
 CRUD
-    create  - create data, .set
-    read  - read data from database .on listen for data
-    update - update wthout changing entire record .update()
+    create  - create data
+        .set()
+    read  - read data from database, listen for data
+        .on()
+    update - update wthout changing entire record
+        .update()
     delete - .remove()
 
 index.html
-bunh of divs
+bunch of divs
 unique key for that user
 
-32 items deep
+32 items deep is max
 
 section data in different refs at top lovel
     user data, blog post data
     seperate refs out into logical groups
+
+from: introFirebase7-2.js
+    // ref is either a single value, or holder, holds place, when reference later, use ref to get it, kinda like id, key and object, think of ref as key that will get values out of later
+    // setting that key equivalent to 
+
+    // firebase giant JSON, that can be used as database
