@@ -234,22 +234,32 @@ $("#update-firebase").on("click", function(){
         database    = firebase.database(),
         counter     = 0;
 
+    // var key = database.ref("userInfo/").push().key;
+    // console.log("key:", key);
+
     // for (let i in data){
 
     // }
     
     // database.ref("userInfo/").orderByKey().limitToLast(1).update({
     // database.ref("userInfo").orderByChild("dateAdded").limitToLast(1).update({
-    // database.ref("userInfo/").update({
-    database.ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
-        let snap = snapshot.val();
-        console.log("snap:", snap);
+    database.ref("userInfo/").child().update({
+    // database.ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
+
+        // let snap = snapshot.val();
+        // console.log("snap:", snap);
+
+    //     console.log(snap.name)
+
+    //     snap.name.update({
+                name: nameUpdate
+    //     });
     
     
-        snap.update({
-        // database.ref().update({
-            "name": nameUpdate
-        });
+        // snap.update({
+        // // database.ref().update({
+        //     "name": nameUpdate
+        // });
 
             // "name": nameUpdate
 
