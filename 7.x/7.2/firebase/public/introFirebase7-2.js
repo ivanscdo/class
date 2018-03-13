@@ -141,7 +141,8 @@ $("#name-submit").on("click", function(){
 
         "name": valName,
         "role": valRole,
-        "hireDate": valDate
+        "hireDate": valDate,
+        "dateAdded": firebase.database.ServerValue.TIMESTAMP
 
     });
 
@@ -169,16 +170,30 @@ $("#pull-firebase").on("click", function(){
 
     let database = firebase.database();
 
-    database.ref("userInfo/").on("child_added", function(snapshot) {
+    // database.ref("userInfo/").on("child_added", function(snapshot) {
+    database.ref("userInfo/").on("value", function(snapshot) {
+        
         
         let data = snapshot.val()
-        console.log(data)
+        //log the entire data from userInfo object
+        // console.log(data)
+
+        //interate through the userInfo object, log the name of each item
+        for (let i in data){
+            console.log(data[i].name);
+            var userElement = $("<p>")
+            userElement.text(data[i].name)
+            userElement.prependTo("#firebase-data");
+        // $("#firebase-data").prepend(data[i].name);
+            
+        }
 
         // $("#name-output").text(data.name);
         // $("#role-output").text(data.role);
         // $("#date-output").text(data.hireDate);
 
-        $("#firebase-data").text(data.name);
+        // $("#firebase-data").text(data.L7V2pPiQ9tfQ6qlQDV_);
+
         // $("#firebase-data").text(data.role);
         // $("#firebase-data").text(data.date);
         
@@ -209,8 +224,44 @@ $("#clear-firebase").on("click", function() {
 
 
 
-
+// END OF: $("#clear-firebase").on("click", function() {
 });
 
+$("#update-firebase").on("click", function(){
+    event.preventDefault();
+
+    let nameUpdate  = $("#name-input").val().trim(),
+        database    = firebase.database(),
+        counter     = 0;
+
+    // for (let i in data){
+
+    // }
+    
+    // database.ref("userInfo/").orderByKey().limitToLast(1).update({
+    // database.ref("userInfo").orderByChild("dateAdded").limitToLast(1).update({
+    // database.ref("userInfo/").update({
+    database.ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
+        let snap = snapshot.val();
+        console.log("snap:", snap);
+    
+    
+        snap.update({
+        // database.ref().update({
+            "name": nameUpdate
+        });
+
+            // "name": nameUpdate
+
+        
+        
+        
+    });
 
 
+
+
+
+
+// END OF: #update-firebase").on("click", function(){
+});
