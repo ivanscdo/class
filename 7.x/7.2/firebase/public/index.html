@@ -24,14 +24,31 @@
 
             <form>
                 <div class="form-group">
-                  <label for="name">Name</label>
+                  <!-- <label for="name">Name</label> -->
+                  <label for="name" id="name-output"></label>                  
                   <input type="text" class="form-control" id="name-input" placeholder="Name">
-                  <small id="emailHelp" class="form-text text-muted">Enter Your Name</small>
+                  <!-- <small id="emailHelp" class="form-text text-muted">Enter Your Name</small> -->
+
+                  <label for="name" id="role-output"></label>
+                  <input type="text" class="form-control" id="role-input" placeholder="Role">
+                  <!-- <small id="emailHelp" class="form-text text-muted">Enter Your Role</small> -->
+
+                  <label for="name" id="date-output"></label>
+                  <input type="text" class="form-control" id="date-input" placeholder="Hire Date">
+                  <!-- <small id="emailHelp" class="form-text text-muted">Enter Your Hire Date</small> -->
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="name-submit">Submit</button>
+                <button type="submit" class="btn btn-outline-primary" id="clear-firebase">Clear Firebase</button>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-outline-secondary" id="pull-firebase">Pull Firebase Info</button>
             </form>
           
+        </div>
+        <div class="col">
+            <h2>firebase data</h2>
+            <p id="firebase-data"></p>
         </div>
       </div>
     </main>
