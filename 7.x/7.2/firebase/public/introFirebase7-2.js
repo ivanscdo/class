@@ -204,13 +204,15 @@ $("#clear-firebase").on("click", function() {
     // database.ref("userInfo/name").set(null);
 
     // database.ref("userInfo/name").remove();
-    
-    
 
-
-
-
+// END OF: $("#clear-firebase").on("click", function() {
 });
+
+
+
+
+
+
 
 
 
