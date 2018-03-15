@@ -137,6 +137,7 @@ $("#name-submit").on("click", function(){
     // })
 
     // test: push(), ie adding one set of userInfo after another, instead of overwriting the previous entry
+    
     database.ref("userInfo/").push({
 
         "name": valName,
@@ -223,62 +224,69 @@ $("#clear-firebase").on("click", function() {
 // END OF: $("#clear-firebase").on("click", function() {
 });
 
+firebase.database().ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
+    // console.log(snapshot.key, snapshot.val();
+    var lastKey = snapshot.key;
 
+    $("#update-firebase").on("click", function(){
+        event.preventDefault();
 
+        // firebase.database().ref("userInfo/users").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
+        //     // console.log(snapshot.key, snapshot.val();
+        //     var lastKey = snapshot.key;
+        // })
+        console.log("lastKey:",lastKey);
 
+        let nameUpdate  = $("#name-input").val().trim(),
+            database    = firebase.database(),
+            counter     = 0;
 
-<<<<<<< HEAD
+        // var key = database.ref("userInfo/").push().key;
+        // console.log("key:", key);
 
-=======
-// END OF: $("#clear-firebase").on("click", function() {
-});
->>>>>>> 1f01643deecd4898b89852a6ad64b0c7dc2ac32b
+        // for (let i in data){
 
-$("#update-firebase").on("click", function(){
-    event.preventDefault();
+        // }
+        
+        // database.ref("userInfo/").orderByKey().limitToLast(1).update({
+        // database.ref("userInfo").orderByChild("dateAdded").limitToLast(1).update({
+        // database.ref("userInfo/users/" + key).update({
+        // database.ref("userInfo/users/" + lastKey).update({
+        database.ref("userInfo/" + lastKey).update({
+            
+            
+        // database.ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
 
-    let nameUpdate  = $("#name-input").val().trim(),
-        database    = firebase.database(),
-        counter     = 0;
+            // let snap = snapshot.val();
+            // console.log("snap:", snap);
 
-    // var key = database.ref("userInfo/").push().key;
-    // console.log("key:", key);
+        //     console.log(snap.name)
 
-    // for (let i in data){
-
-    // }
-    
-    // database.ref("userInfo/").orderByKey().limitToLast(1).update({
-    // database.ref("userInfo").orderByChild("dateAdded").limitToLast(1).update({
-    database.ref("userInfo/").child().update({
-    // database.ref("userInfo/").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
-
-        // let snap = snapshot.val();
-        // console.log("snap:", snap);
-
-    //     console.log(snap.name)
-
-    //     snap.name.update({
-                name: nameUpdate
-    //     });
-    
-    
-        // snap.update({
-        // // database.ref().update({
-        //     "name": nameUpdate
-        // });
-
-            // "name": nameUpdate
-
+        //     snap.name.update({
+                    name: nameUpdate
+        //     });
         
         
-        
+            // snap.update({
+            // // database.ref().update({
+            //     "name": nameUpdate
+            // });
+
+                // "name": nameUpdate
+
+            
+            
+            
+        });
+
+
+
+
+
+
+
+    // END OF: #update-firebase").on("click", function(){
     });
 
-
-
-
-
-
-// END OF: #update-firebase").on("click", function(){
+// END OF: firebase.database().ref("userInfo/users").orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
 });
