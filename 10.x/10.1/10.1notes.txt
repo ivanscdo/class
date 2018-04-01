@@ -1,0 +1,183 @@
+https://www.youtube.com/watch?v=pU9Q6oiQNd0
+node.js, what is it?
+    took js, normally in browser, allowed to run on computer (chrome v8 engine);
+    can:
+        access files,
+        listen to network traffic,
+        listen to http requests,
+        send back file,
+        access db directly;
+    anything php/ruby can do, node can do;
+
+build utilities
+    day in day out dev
+    gault, grunt, yomen - things you'l concatennate and build js files with, listen to file system changes, live reload, save sass file
+    job description: "front end dev, node js" this kind
+web serve
+    job description: "Node js eng/dev" build web server/app on node instead of php/ruby on rails/python
+
+notes
+    no window object or document object, instead global object
+    not tied to html document, tied to a process object
+
+    execute files (similar to php)
+        to run: "node <name of file>"
+        whatever is on the file will be executed on the terminal
+
+    modules, npm, basic web server
+
+modules
+    how to load one file into another (require js)
+
+    var m2 = require("./module2")
+        ^means: before you do any code, load in module 2, ./ means looking for a file
+    
+    building object
+        individual items
+            modules.exports.<key> = <value>
+        using a function
+            modules.exports = function() {
+                console.log("module 2");
+            }
+        call m2(); on other file will return function
+npm
+    node package manager - allows to download and manage packages
+    run: npm install underscore
+        made node moduels folder, made underscore in there
+    run: npm init
+        creates a package, adds any dependencies already installed
+    npm install backbone
+        adds to node modules, but not package json
+    npm install backbone -s
+        -s save, adds backbone to package json
+    npm install 
+        if dependencies deleted, will look through json package and install needed dependencies
+    1000's of dependencies people building all the time! (api??)
+    load in a package, will do dirty work, focus on building application
+
+server 
+    http package already comes with node, do not have to install
+
+    var http = require("http");
+
+    var server = http.createServer(function(request, response){
+        console.log("got a request");
+        response.write("hi");
+        response.end();
+    })
+
+    server.listen(3000)
+
+    on terminal
+        run: module1
+        keeps running, keeps listening
+    on browser
+        localhost/3000
+        "hi" on screen
+        "got a request" on terminal
+
+https://www.youtube.com/watch?v=U8XF6AFGqlc
+REPL
+    read, eval, print, loop;
+    allows to run js in command line (terminal);
+
+npm
+    node package manager
+    allows to install packages and modules for node
+
+package.json file
+    main manifest file need to have in mode apps/proj
+
+js can be run on server with node.js, can build in depth, sophisticated,real-time apps
+node.js uses event-driven, non-blocking I/O model
+PHP/apache
+    php app on apache server, each connection or request spans a new thread, takes up system memory, maxes out, needs to wait for one to finish,
+node.js 
+    operates on single thread, uses non-blocking I/O calls, allows to support many many concurrent connections, event loop
+    makes it extremely fast and efficient
+
+class
+    fork github repo, need README, fork and star other people's codes
+
+    server architacture, server reqeust response cyclce
+
+    mongo, express, react, node
+
+    how client constantly communicating with web server and updating info on package
+
+    examples of server-side code
+        api's
+        firebase
+        clicking invoice for pdf
+
+    server
+        hardware it runs on
+        a program (web server application), takes input, gives output based on request
+        don't always give output
+    browser is essentially a GUI (DOM)
+
+    browser takes get requests does it on your behalf as a client interface
+
+    arduino/raspberry pi's are simple examples of servers
+
+    client sends reqeust to server, server sends request
+
+node.js
+    since 2009, before js seen as a hobby used in browser, 
+    runtime can use, run js outside of browser
+    can run front and backend with same language
+    can use electron, cordova, react native mobile apps
+
+    Wal-Mart responsible for node's promenance, 
+
+why use node as server    
+    reuses js
+    easily extendable (numerous plugins to expand capabilities), philosophy "don't build something too big" a lot of small modules
+    fast implementation
+    single-thread asynchronous model
+    
+    application development rather than go-to market sites
+
+node is not a web server, just a utility, run-time that allows you to run js
+
+asynchronous vs synchronous threading
+asyn - like call center, one csr per call
+syn - like chat, one csr for all
+
+no limit on requests,  but there are hardware limitations
+
+how can we run files with node.js direclty from terminal 54:06
+
+when building servers, start with one file
+
+"node <file name>": runs file
+"node": allows you to run code like a terminal
+
+process.argv
+
+solution to parameter check 1:13:xx
+
+quotes for spaces in strings, or backslash in strings
+ls
+
+
+switch() case, run through options
+.split()
+
+require("<file path");
+
+no global scope in node
+es6 import export 
+
+node
+
+string interpolation - take a value, insert into a sring without using qutoes and +
+
+
+cli application
+
+hw 2:32:xx
+similar to ajax, request to server, 
+
+.env hide all keys in
+

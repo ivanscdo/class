@@ -66,6 +66,11 @@ run server
     empty: index.html
     by default read from index.html, if other pages /whatever.html to access those pages
     given files: dump to public dir
+    close/stop
+        ctrl-c
+
+deploy to live site
+    firebase deploy
 
 
 <1:07:00>

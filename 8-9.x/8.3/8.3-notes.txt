@@ -1,0 +1,6 @@
+algorhythm not language specific
+    pattern of steps follow, to achieve results
+
+bubble sort
+    step through array, as get items, compare to next item, if needs sorted, sorted to next item
+
