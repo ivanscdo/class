@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>playlistReadDB</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-5778121098530666357</string>
+			<key>name</key>
+			<string>127.0.0.1</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1073, 660}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>DROP DATABASE IF EXISTS playlistReadDB;
+
+CREATE DATABASE playlistReadDB;
+
+USE playlistReadDB;
+
+CREATE TABLE playlist (
+    `id` INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, 
+    `title` VARCHAR(30), 
+    `artist` VARCHAR(30), 
+    `genre` VARCHAR(30),
+    PRIMARY KEY(`id`)
+);
+
+
+INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("Daily Mail", "Radiohead", "art rock");
+
+INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("Feel", "Kendrick Lamar", "rap");
+
+INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("So America", "Portugal. The Man", "psych rock");
+
+UPDATE playlist
+SET 
+    `genre` = "Time traveling electronic space rock"
+WHERE `artist` = "Radiohead"
+
+UPDATE playlist
+SET 
+    `title` = "So American"
+WHERE `id` = "3"</string>
+			<key>table</key>
+			<string>playlist</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>207</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>UPDATE playlist
+SET 
+    `genre` = "Time traveling electronic space rock"
+WHERE `artist` = "Radiohead"</string>
+		<string>UPDATE playlist
+SET 
+    `title` = "So American"
+WHERE `id` = "3"</string>
+		<string>INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("So America", "Portugal. The Man", "psych rock")</string>
+		<string>INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("Feel", "Kendrick Lamar", "rap")</string>
+		<string>INSERT INTO playlist (
+    `title`, `artist`, `genre`
+)
+VALUES ("Daily Mail", "Radiohead", "art rock")</string>
+		<string>CREATE TABLE playlist (
+    `id` INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, 
+    `title` VARCHAR(30), 
+    `artist` VARCHAR(30), 
+    `genre` VARCHAR(30),
+    PRIMARY KEY(`id`)
+)</string>
+		<string>DROP DATABASE IF EXISTS playlistReadDB;
+CREATE DATABASE playlistReadDB;
+USE playlistReadDB</string>
+		<string>DROP DATABASE IF EXISTS ice_creamDB;
+CREATE DATABASE ice_creamDB;
+USE ice_creamDB;
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  flavor VARCHAR(45) NULL,
+  price DECIMAL(10,2) NULL,
+  quantity INT NULL,
+  PRIMARY KEY (id)
+);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("vanilla", 2.50, 100);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("chocolate", 3.10, 120);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("strawberry", 3.25, 75)</string>
+		<string>INSERT INTO products (flavor, price, quantity)
+VALUES ("strawberry", 3.25, 75)</string>
+		<string>ALTER TABLE programming_languages ADD `mastered` BOOLEAN DEFAULT 0</string>
+		<string>UPDATE programming_languages
+SET
+	`rating` = 5
+WHERE `id` = 3</string>
+		<string>INSERT INTO programming_languages(
+	`languages`, `rating`
+	)
+VALUES
+("html", 1),
+("css", 2), 
+("javascript", 3)</string>
+		<string>INSERT INTO programming_db(
+	`languages`, `rating`
+	)
+VALUES
+("html", 1),
+("css", 2), 
+("javascript", 3)</string>
+		<string>CREATE TABLE programming_languages (
+	`id` INTEGER UNSIGNED AUTO_INCREMENT NOT NULL, 
+	`languages` VARCHAR(30), 
+	`rating` INTEGER(10),
+	PRIMARY KEY(id)
+	)</string>
+		<string>CREATE SCHEMA programming_db</string>
+		<string>SELECT * FROM people
+WHERE `has_pet` = 1 AND `pet_name` = "Monster"</string>
+		<string>UPDATE people
+SET
+	`has_pet` = 1, 
+	`pet_name` = "Monster",
+	`pet_age` = 1
+WHERE `has_pet` = 0</string>
+		<string>UPDATE people
+SET
+	`has_pet` = 1, 
+	`pet_name` = "Monster",
+	`pet_age` = 1,
+WHERE `has_pet` = 0</string>
+		<string>UPDATE people
+SET
+	`has_pet` = 1, 
+	`pet_age` = "Monster",
+	`pet_age` = 1,
+WHERE has_pet = 0</string>
+		<string>UPDATE people
+SET
+	`has_pet` = 1, 
+	`pet_age` = "Monster",
+	`pet_age` = 1,
+WHERE `has_pet` = 0</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

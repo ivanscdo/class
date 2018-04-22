@@ -1,2 +1,4 @@
 7.x/7.2/andrew-firebase-ex
 7.x/7.3/emp-data-mgmt-project
+node_modules
+.DS_Store
