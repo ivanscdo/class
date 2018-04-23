@@ -29,14 +29,42 @@ var characters = [{
 // Routes
 // ===========================================================
 app.get("/", function(req, res) {
-  res.send("Welcome to the Star Wars Page!");
+  res.send("server2.js: Welcome to the Star Wars Page!");
 });
 
-app.get("/:character", function(req, res) {
+app.get("/:character/:name?", function(req, res) {
+// app.get("/:character/:name", function(req, res) {
   var chosen = req.params.character;
+  var name = req.params.name;
 
   // What does this log?
-  console.log(chosen);
+  console.log(chosen, name);
+  // res.send(chosen)
+  // console.log(characters[0]);
+
+  // for (let i = 0; i < characters.length; i++) {
+  //   for (let value in characters[i]) {
+  //     if (characters[i][value] === chosen) {
+  //       // res.send(characters[i].characters[i][value])
+  //       // res.send(characters[i])
+  //       console.log(characters[i]);
+  //     }
+  //   }
+  // }
+
+  for (let i = 0; i < characters.length; i++) {
+    for (let value in characters[i]) {
+      if (characters[i][value] === chosen) {
+        // res.send(characters[i].characters[i][value])
+        // res.send(characters[i])
+        // console.log(`chosen: ${characters[i]}`);
+        console.log("chosen: ", characters[i]);
+        
+      } else if (characters[i][value] === name) {
+        console.log(`name: ${characters[i]}`);
+      }
+    }
+  }
 
   res.end();
 });

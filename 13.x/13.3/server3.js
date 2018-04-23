@@ -31,11 +31,11 @@ var characters = [{
 // ===========================================================
 
 app.get("/", function(req, res) {
-  res.send("Welcome to the Star Wars Page!");
+  res.send("server3.js: Welcome to the Star Wars Page!");
 });
 
 // What does this route do?
-// returns character array of objects in weebpage
+// returns var character defined above; returns array of objects
 app.get("/api/characters", function(req, res) {
   return res.json(characters);
 });
@@ -48,6 +48,7 @@ app.get("/api/characters/:character", function(req, res) {
   console.log(chosen);
 
   // What does this code do?
+  // returns which ever character we specified in /api/characters/<here>
   for (var i = 0; i < characters.length; i++) {
     if (chosen === characters[i].routeName) {
       return res.json(characters[i]);
@@ -55,6 +56,7 @@ app.get("/api/characters/:character", function(req, res) {
   }
 
   // What does this code do?
+  // returns string "no character found" if route does not match anything
   return res.send("No character found");
 });
 
