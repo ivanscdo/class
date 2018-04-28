@@ -1,3 +1,6 @@
 [submodule "clickyblock"]
 	path = clickyblock
 	url = https://github.com/ivanscdo/clickyblock.git
+[submodule "hot-restaurant-14.1classProject"]
+	path = hot-restaurant-14.1classProject
+	url = https://github.com/ivanscdo/hot-restaurant-14.1classProject
