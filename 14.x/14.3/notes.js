@@ -8,16 +8,16 @@
 
 // REST 31:51
 
-// STANDARD FOR MAKING REQUESTS TO APP THAT AHVE TO ADHAERE TO SPECIFI RULES
-// VERY MUC LIEQUID, NO REST POLICE, just a strnadard that a lot of peeps like to adhere to 
+// Standard for making requests to app that have to adhere to specific rules
+// Very much liquid, no REST police, just a strnadard that a lot of peeps like to adhere to 
 
-//idea: have for action, get post, put, pastch, delete, req mthod when talking to server, tell it what need to do
+// main idea: have four actions: GET, POST, PUT/PATCH, DELETE, which are request methods when talking to server; tell it what need to do.
 
 // uniform interface
-//if get req for reosoruce, have pwe to delte, better get back everytihgn in req to delte, need unique id to send with delte req to actually delete (resource based part)
+// if GET request for resource, have power to delete,  get back everything in request to delete, need unique id to send with delete req to actually delete (this is the resource based part)
 
 // stateless!!!!!
-//  10 yrs ago, might send req to api, init sesh, remembering stuff, when tel to elete, knows what record to delte, modarn day: we hvae multiple servers running same app, load-balancer, which server is bussy, sends req to server that is least busy, if statefull  api, always routed to same server, doesn't work today, stateless arch, everything server needs includes in req, includes in delte req everything server needs to know, might need multiple req to get details, then delte/patch etc to perform action
+//  10 yrs ago, might send req to API, initialie session, had to remember remembering stuff, when tel to elete, knows what record to delte, modarn day: we hvae multiple servers running same app, load-balancer, which server is bussy, sends req to server that is least busy, if statefull  api, always routed to same server, doesn't work today, stateless arch, everything server needs includes in req, includes in delte req everything server needs to know, might need multiple req to get details, then delte/patch etc to perform action
 
 // cacheble
 // req can be cashed, when send req send data, 
@@ -117,7 +117,7 @@ $.ajax("/todos/" + id, {
 // solution: ~<2:43:xx
 // need to send something back!!
 
-// runthrou: 2:47:xx
+// runthrough: 2:47:xx
 // need package.json, no wmatter what in node, needs to be ther even if empty, readon: when go to intall something later, expected to be there, gives info, heroku requires or wont work, bare min: body-prarser, expxress, express-handlebards, mysql,  fs-extra
 // need views/layouts folder, can hadd subfolders, reference with / as with filepath, 
 // need main/default layout, main.handlebars with {{{body}}}
