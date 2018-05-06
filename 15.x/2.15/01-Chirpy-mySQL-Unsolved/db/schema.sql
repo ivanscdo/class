@@ -1,0 +1,12 @@
+CREATE DATABASE 152_chirpy;
+USE 152_chirpy;
+
+CREATE TABLE `chirps` (
+  `id` INT NOT NULL AUTO_INCREMENT, 
+  `name` VARCHAR(255) NOT NULL, 
+  `chirp` VARCHAR(255) NOT NULL, 
+  PRIMARY KEY (id)
+
+  -- TABLE CODE TO GO HERE
+
+);
