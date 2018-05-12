@@ -1,0 +1,73 @@
+0.0 	install mysql2 & sequelize npm
+
+1.0 	install sequelize and sequelize-cli globally
+1.1 	`npm install-g sequelize-cli sequelize`
+
+2.0	at root of project directory, run init
+2.1 	`sequelize init:config & sequelize init: models`
+2.2 	will create: config/config.json & models/index.js
+
+3.0 	config/config.json, connecting to db, defaults to dev,
+	can use .env file to specify dev/test/production
+3.1	dev obj must match MySQL db info
+3.2	update username, pwd, db, host, dialect
+
+3.3	models/index.js, defines sequelize models
+3.3.1	production - deployed  to heroku
+	development - deployed locally
+	test - db used for testing
+3.3.2	goes through js files other than itself/other than index.js,
+	runs through sequelize, gives models sequelize helper methods,
+	ensures associations setup, then exports obj we interact with.
+
+4.0	create new file inside models dir, ex: user.js, below is minimum required
+
+	module.exports = function(sequelize, DataTypes) {
+	 	var User = sequelize.define("User", {
+			email: DataTypes.STRING, 
+			password: DataTypes.STRING
+		});
+		return User;
+	}
+
+4.0.1	function parameters
+	sequelize - connection to db
+	DataTypes - defines what data each property should be
+4.0.2	sequelize.define method takes two arguments,
+	1.name of model as a string
+	2.obj describing obj schema
+	each property represents a column in db
+	sequelize.define returns obj stored in var User, var then returned
+
+5.0	sequelize.synch()
+5.1	create tables from models by synching
+5.2	in server.js add:
+	db = require("./models");
+	db.sequelize.synch().then(function() {
+		app.listen(PORT, function() {
+			console.log("Listening on port", PORT);
+		});
+	});
+5.2.1	require("./models") requires entire models folder,
+	but req's index.js by default, could also use: require("./models/index");
+5.2.2	db.sequelize.sych():
+	sequelize property is connection to db
+	synch is built in method that creates tables using models we described
+	.then() - once synched, start express server, 
+	guarantee it starts after db ready, 
+	and won't start if error with db
+	check by seeing if tables were added
+
+final notes:	table names:
+		sequelize will pluralize table names by default,
+		always name models in singular
+		id:
+		by default gives auto-incrementing primary id,
+		updatedAt/createdAt column
+
+	
+
+summary:	run sequelize init, creates config/config.json and models/index.js,
+		update config.json, with matching db info
+		create new model, 
+		require db in server.js, sync first then start server

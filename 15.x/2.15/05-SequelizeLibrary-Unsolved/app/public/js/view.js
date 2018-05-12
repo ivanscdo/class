@@ -4,11 +4,14 @@ $("#search-btn").on("click", function(event) {
 
   // Save the book they typed into the book-search input
   var bookSearched = $("#book-search").val().trim();
+  console.log(`view.js/bookSearched:${bookSearched}`)
 
   // Make an AJAX get request to our api, including the user's book in the url
   $.get("/api/" + bookSearched, function(data) {
 
+    console.log("view.js/data");
     console.log(data);
+    
     // Call our renderBooks function to add our books to the page
     renderBooks(data);
 
@@ -53,11 +56,17 @@ $("#genre-search-btn").on("click", function() {
 
 function renderBooks(data) {
   if (data.length !== 0) {
+    console.log("inside renderBooks()");
+    console.log(data);
+    console.log(typeof data);
+    console.log(data.length);
+    
 
     $("#stats").empty();
     $("#stats").show();
 
     for (var i = 0; i < data.length; i++) {
+      console.log("inside for loop")
 
       var div = $("<div>");
 

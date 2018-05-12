@@ -121,7 +121,19 @@ var sequelize = new Sequelize("<db name>", "<username>", "<pwd>", {
 
 
 // sequelize cli
-// 2:32:xx
+// 2:33:30
+// tool sequlize gives us to generate project config automatically, don't have to manually go create directories etc
 // npm install -g sequelize-cli
+// see dir: instructions-sequelize-cli
 
-// focus: query, module usage
+// sequelize docs
+// model usage
+// breakdown of methods, "how to do specific thing"
+// model definition
+// data types, things to do, how timestamps work
+// querying
+// specific stuff on setting up wheres(basics, every operations), counts, alias property (tuple instead of single value)
+// for now focus: query, module usage, model definition
+// instances/associations 
+// sequelize-cli
+// refer to docs in repo

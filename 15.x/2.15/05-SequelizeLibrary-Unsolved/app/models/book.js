@@ -7,7 +7,7 @@ var Sequelize = require("sequelize");
 var schema = require("../config/connection");
 
 // Create a "Book" model with the following configuration
-var Book = schema.define("character", {
+var Book = schema.define("book", {
 // 1. A title property of type STRING    
     title: Sequelize.STRING,
 // 2. An author property of type STRING

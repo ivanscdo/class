@@ -1,0 +1,16 @@
+{
+  "name": "04-Disemvowel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "04-Disemvowel.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
