@@ -59,6 +59,8 @@
 // multiple authors stored as array
 // mongodb engrained with express/node because it is hadled in code
 // collection is like table in SQL, but it is not a table, collection of documents
+
+
 // noSQL: db > collection > document > field
 // SQL: db > table > row > column
 
