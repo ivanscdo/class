@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     //   }
     // });
     Author.hasMany(models.Post, {
-      onDelte: "cascasde"
+      onDelete: "cascasde"
     });
   };
 
