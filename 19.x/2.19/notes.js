@@ -103,7 +103,7 @@ e(); (returns undefined)
 // 1:39:xx
 // solution: 109-Stu_ObjDestruct-Unsolved
 
-// 1:39:xx
+// 1:39:15
 // babel
 // turns es6 into code we can use in every browser
 // babel -node index.js --presets env,stage-2
@@ -111,15 +111,18 @@ e(); (returns undefined)
 // no longer using require, but import
 // in past use module.exports, export default is what we will get when we import
 // exports get created into obj
+// export default to export default obj or...
+// export specific things such as: export remove then import {remove} from "./utils"
 
 
 
-// 2:18:xx
+// 2:18:23
 // react
 // front end framework for web applications
 // any big app, instead of going to page to page, url might update, but still on same page, facebook, google, etc; react makes it super easy
 // stop thinking of page of something we interact with
-// think of it as: design & specify what UI should look like, as state of app updates, UI automatically reacts to that, and models that state in UI; build model, have state, when somebody does this action then update the state in this way, because state updates, UI updates, not because user clikced button, bc state updated; think of UI as one wholeistic thing relying on state
+// think of it as: design & specify what UI should look like, as state of app updates, UI automatically reacts to that, and models that state in UI
+// build model, have state, when somebody does this action then update the state in this way, because state updates, UI updates, not because user clikced button, bc state updated; think of UI as one wholeistic thing relying on state
 
 // at it's core it is: components, props, states
 
@@ -128,7 +131,7 @@ e(); (returns undefined)
 
 // developed at facebook
 // can handle bunch of data updates, data constantly changing
-// relised on component-based architecture
+// relies on component-based architecture
 
 // 2:30:xx
 // components
@@ -153,6 +156,7 @@ e(); (returns undefined)
 // to get started: need build system
 // babel
 // webpack-module bundler
+// allows node modules and imports
 
 // 2:46:xx
 // demos

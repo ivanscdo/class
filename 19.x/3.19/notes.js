@@ -33,12 +33,20 @@
 // src: (recommend: comment out register service worker inside index.js, recently added, merits in production, but nightmare in dev, decides to not work on localhost, cashed version of page; serves up page quickly even if bad connection), index.css, app.css, app.js (super important); index.js importing stuff, call reactDOM.render - tell it to render app, document.getElementbyID root, div id root in html, imported app as class, but refing as tag, jsx allows us to pass components around without strings, app.js - main component, allows return max of one app from given comp, entire thing wrapped in one div can have children, but cannot have sibling divs, if needed would need another wrapper, cannot have class attribute, need className; import react... 37:00... component - class <something> extends component; render method - returns what what ui to look like, empthy div, but needs it; div inside return (), curly brackets allow to specify js express, img src={logo}
 
 // 43:xx
-// npm i -g react create
-// react-create generate SubComponent
+// npm i -g react-create
+// react-create component SubComponent
+
+// 1:02:50
+// solution: 02-Stu_HelloReact-Unsolved
+// app.js root component, empty no logic, just for subcomponents
+
+// 1:08:xx
+// 03-Stu_HelloDiv-Unsolved
+// solution: 1:23:43
 
 // 1:25:xx
 // making very small components in react, breaking into definable chunks, 
-// props - pass atrr from child comp, include as atr on component declaration, put it as attr, then able to get it from props.<whatever name>, can also pass multiple props, add some point add click event, go and edit one little component
+// props - pass atrr from child comp, include as attr on component declaration, put it as attr, then able to get it from props.<whatever name>, can also pass multiple props, add some point add click event, go and edit one little component
 {/* <ListItem label = "Peas"/>
 <ListItem label = "Carrots"/>
 <ListItem label = "Artichokes"/> */}
@@ -46,8 +54,15 @@
 
 // beautify react extension
 
+// 1:48:30
+// return from break
+
 // 1:49:00
-// css cdn links in index.html
+// css cdn links go in index.html
+// react provides UI but no styling
+
+// 1:52:xx
+// 05-
 
 // 2:08:00 (!!)
 // solution 05-Stu_HelloBootstrap_Unsolved
