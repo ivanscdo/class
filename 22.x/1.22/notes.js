@@ -34,6 +34,7 @@
 
 
 // 41:xx
+// git@github.com:aklatzke/redux-example.git
 // redux
 // at it's core, made up of:
 // actions
